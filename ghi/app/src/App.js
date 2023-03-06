@@ -12,16 +12,16 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="manufacturers">
             <Route index element={<ManufacturersList />}/>
-            {/* <Route path="new" element={} /> */}
+            <Route path="new" element={} />
           </Route>
-          {/* <Route path="automobiles">
+          <Route path="automobiles">
             <Route index element={}/>
             <Route path="new" element={} />
           </Route>
           <Route path="vehicles">
             <Route index element={}/>
             <Route path="new" element={} />
-          </Route> */}
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
