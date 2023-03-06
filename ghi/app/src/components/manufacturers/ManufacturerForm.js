@@ -32,7 +32,7 @@ const ManufacturerForm = () => {
       <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
           <h1>Create a new manufacturer</h1>
-          <form id="create-shoe-form" onSubmit={handleSubmit}>
+          <form id="create-manufacturer-form" onSubmit={handleSubmit}>
             <div className="form-floating mb-3">
               <input
                 required
