@@ -5,7 +5,7 @@ import ManufacturersList from './components/manufacturers/ManufacturersList'
 import ManufacturerForm  from "./components/manufacturers/ManufacturerForm";
 import AutomobileForm from "./components/automobiles/AutomobileForm";
 import AutomobileList from "./components/automobiles/AutomobileList";
-
+import SalesList from "./components/sales/SalesList";
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +25,10 @@ function App() {
             <Route index element={}/>
             <Route path="new" element={} />
           </Route> */}
+          <Route path="sales">
+            <Route index element={<SalesList />} />
+          </Route>
+          
         </Routes>
       </div>
     </BrowserRouter>
