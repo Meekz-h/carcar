@@ -9,6 +9,18 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="manufacturers">
+            <Route index element={}/>
+            <Route path="new" element={} />
+          </Route>
+          <Route path="automobiles">
+            <Route index element={}/>
+            <Route path="new" element={} />
+          </Route>
+          <Route path="vehicles">
+            <Route index element={}/>
+            <Route path="new" element={} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
