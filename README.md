@@ -2,15 +2,13 @@
 
 Team:
 
-* Person 1 - Which microservice?
-* Mico Hernandez- Sales microservice?
+* Taylor Wills - Service microservice
+* Mico Hernandez- Sales microservice
 
 ## Design
 
 ## Service microservice
 
-Explain your models and integration with the inventory
-microservice, here.
 
 ## Sales microservice
 
