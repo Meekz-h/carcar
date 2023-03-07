@@ -39,7 +39,7 @@ const SalesPersonForm = () => {
       <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
-            <h1>Create a new automobile</h1>
+            <h1>Create a new Sales person</h1>
             <form id="create-salesperson-form"  onSubmit={handleSumbit}>
               <div className="form-floating mb-3">
                 <input

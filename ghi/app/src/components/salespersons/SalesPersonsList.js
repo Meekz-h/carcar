@@ -33,9 +33,7 @@ const SalesPersonList = () => {
                   return (
                     <tr key={salesperson.id}>
                       <td>
-                        <Link to={`/sales/${salesperson.id}`}>
                           {salesperson.name}
-                        </Link>
                       </td>
                       <td>{salesperson.employee_number}</td>
                     </tr>

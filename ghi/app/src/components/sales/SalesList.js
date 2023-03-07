@@ -35,9 +35,7 @@ const SalesList = () => {
                   return (
                     <tr key={sale.id}>
                       <td>
-                        <Link to={`/sales/${sale.sales_person.id}`}>
                           {sale.sales_person.name}
-                        </Link>
                       </td>
                       <td>{sale.purchaser.name}</td>
                       <td>{sale.vin.vin}</td>

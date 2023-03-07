@@ -41,7 +41,7 @@ const CustomerForm = () => {
       <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
-            <h1>Create a new automobile</h1>
+            <h1>Create a new customer</h1>
             <form id="create-customer-form" onSubmit={handleSumbit}>
               <div className="form-floating mb-3">
                 <input
