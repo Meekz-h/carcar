@@ -74,7 +74,7 @@ def api_list_sales(request,id=None):
         if id is None:
             sales = Sale.objects.all()
         else:
-            sales=Sale.objects.filter(sales_person_id=id)
+            sales=Sale.objects.filter(sales_person__employee_number=id)
         return JsonResponse(
             {"sales":sales},
             encoder= SaleListEncoder,

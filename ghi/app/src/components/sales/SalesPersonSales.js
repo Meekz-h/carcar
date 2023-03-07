@@ -52,7 +52,7 @@ const SalesPersonSales = () => {
                 {
                   salespersons.map(salesperson => {
                     return (
-                      <option key={salesperson.id} value={salesperson.id}>
+                      <option key={salesperson.employee_number} value={salesperson.employee_number}>
                       {salesperson.name}
                     </option>
                     );
