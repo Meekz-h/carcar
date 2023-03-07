@@ -8,6 +8,12 @@ import AutomobileList from "./components/automobiles/AutomobileList";
 import SalesList from "./components/sales/SalesList";
 import VehiclesList from './components/vehicles/VehiclesList';
 import VehiclesForm from './components/vehicles/VehiclesForm';
+import SalesForm from "./components/sales/SalesForm";
+import SalesPersonSales from "./components/sales/SalesPersonSales";
+import SalesPersonList from "./components/salespersons/SalesPersonsList";
+import SalesPersonForm from "./components/salespersons/SalesPersonForm";
+import CustomerList from "./components/customers/CustomerList";
+import CustomerForm from "./components/customers/CustomerForm";
 
 function App() {
   return (
@@ -30,6 +36,16 @@ function App() {
           </Route>
           <Route path="sales">
             <Route index element={<SalesList />} />
+            <Route path="new" element={<SalesForm />} />
+            <Route path=":employee_number" element={<SalesPersonSales/>}/>
+          </Route>
+          <Route path="salespersons">
+            <Route index element={<SalesPersonList />} />
+            <Route path="new" element={<SalesPersonForm/>}/>
+          </Route>
+          <Route path="customers">
+            <Route index element={<CustomerList />} />
+            <Route path="new" element={<CustomerForm/>}/>
           </Route>
         </Routes>
       </div>

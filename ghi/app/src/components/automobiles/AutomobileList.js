@@ -35,7 +35,7 @@ const AutomobileList = () => {
                     {
                         automobiles.map(auto => {
                             return (
-                                <tr key={auto.href}>
+                                <tr key={auto.id}>
                                     <td>{auto.vin}</td>
                                     <td>{auto.year}</td>
                                     <td>{auto.color}</td>

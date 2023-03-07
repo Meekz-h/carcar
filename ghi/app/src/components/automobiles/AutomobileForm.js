@@ -52,7 +52,6 @@ const AutomobileForm = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(formData)
 
   return (
     <>
