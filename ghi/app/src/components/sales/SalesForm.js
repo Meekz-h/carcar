@@ -10,37 +10,31 @@ const SalesForm = () => {
         vin:"",
         sale_price:"",
   })
-  const fetchSalesPersons = async () => {
-    const url = "http://localhost:8090/api/salespersons";
-    const resp = await fetch(url);
-    if (resp.ok) {
-      const data = await resp.json();
+  const fetchData = async () => {
+    const urlSalesPerson = "http://localhost:8090/api/salespersons";
+    const respSalesPerson = await fetch(urlSalesPerson);
+    if (respSalesPerson.ok) {
+      const data = await respSalesPerson.json();
       setSalesPersons(data.sales_persons);
     }
-  };
 
-  const fetchPurchasers = async () => {
-    const url = "http://localhost:8090/api/customers";
-    const resp = await fetch(url);
-    if (resp.ok) {
-      const data = await resp.json();
+    const urlCustomers = "http://localhost:8090/api/customers";
+    const respCustomers = await fetch(urlCustomers);
+    if (respCustomers.ok) {
+      const data = await respCustomers.json();
       setPurchasers(data.customers);
     }
-  };
 
-  const fetchAutos = async () => {
-    const url = "http://localhost:8100/api/automobiles/";
-    const resp = await fetch(url);
-    if (resp.ok) {
-      const data = await resp.json();
+    const urlAutos = "http://localhost:8100/api/automobiles/";
+    const respAutos = await fetch(urlAutos);
+    if (respAutos.ok) {
+      const data = await respAutos.json();
       setAutos(data.autos);
     }
   };
 
   useEffect(() => {
-    fetchAutos();
-    fetchPurchasers();
-    fetchSalesPersons();
+      fetchData();
   });
 
     const handleFormChange = (e) => {
