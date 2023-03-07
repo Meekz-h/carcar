@@ -8,7 +8,7 @@ from .models import AutomobileVO, Sale, SalesPerson, Customer
 # Create your views here.
 class AutomobileVOEncoder(ModelEncoder):
     model = AutomobileVO
-    properties = ["vin"]
+    properties = ["vin","sold"]
 
 class SalesPersonListEncoder(ModelEncoder):
     model = SalesPerson
@@ -89,6 +89,7 @@ def api_list_sales(request,id=None):
                 purchaser = Customer.objects.get(id=content["purchaser"])
                 content["purchaser"] = purchaser
             if "vin" in content:
+                AutomobileVO.objects.filter(vin=content["vin"]).update(sold=True)
                 auto = AutomobileVO.objects.get(vin=content["vin"])
                 content["vin"] = auto
         except SalesPerson.DoesNotExist:
@@ -101,4 +102,13 @@ def api_list_sales(request,id=None):
             sale,
             encoder=SaleListEncoder,
             safe=False,
+        )
+
+@require_http_methods(["GET"])
+def api_list_autos(request):
+    if request.method == "GET":
+        autos = AutomobileVO.objects.all()
+        return JsonResponse(
+            {"autos":autos},
+            encoder=AutomobileVOEncoder,
         )

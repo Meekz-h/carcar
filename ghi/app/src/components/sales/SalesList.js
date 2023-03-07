@@ -24,6 +24,7 @@ const SalesList = () => {
               <thead>
                 <tr>
                   <th>Sales Person</th>
+                  <th>employee_number</th>
                   <th>Purchaser</th>
                   <th>VIN</th>
                   <th>Sales Price</th>
@@ -37,6 +38,7 @@ const SalesList = () => {
                       <td>
                           {sale.sales_person.name}
                       </td>
+                      <td>{sale.sales_person.employee_number }</td>
                       <td>{sale.purchaser.name}</td>
                       <td>{sale.vin.vin}</td>
                       <td>${sale.sale_price}</td>

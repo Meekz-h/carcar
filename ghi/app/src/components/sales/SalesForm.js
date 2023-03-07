@@ -25,11 +25,12 @@ const SalesForm = () => {
       setPurchasers(data.customers);
     }
 
-    const urlAutos = "http://localhost:8100/api/automobiles/";
+    const urlAutos = "http://localhost:8090/api/autos";
     const respAutos = await fetch(urlAutos);
     if (respAutos.ok) {
       const data = await respAutos.json();
-      setAutos(data.autos);
+      setAutos(data.autos)
+
     }
   };
 
@@ -106,11 +107,13 @@ const SalesForm = () => {
                 <select required className="form-select" name="vin" onChange={handleFormChange}>
                   <option value="">Choose an Automobile</option>
                   {autos.map((auto) => {
-                    return (
-                      <option key={auto.vin} value={auto.vin}>
-                        {auto.vin}
-                      </option>
-                    );
+                    if (!(auto.sold)) {
+                      return (
+                        <option key={auto.vin} value={auto.vin}>
+                          {auto.vin}
+                        </option>
+                      );
+                    }
                   })}
                 </select>
               </div>
