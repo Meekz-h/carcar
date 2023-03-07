@@ -57,7 +57,6 @@ const SalesForm = () => {
         const resp = await fetch(url, fetchConfig);
         if (resp.ok) {
             const data = await resp.json();
-            console.log(data)
             setFormData({
                 sales_person: "",
                 purchaser: "",
@@ -77,7 +76,7 @@ const SalesForm = () => {
             <h1>Create a new sale</h1>
             <form id="create-sale-form" onSubmit={handleSubmit}>
               <div className="mb-3">
-                <select required className="form-select" name="sales_person" onChange={handleFormChange}>
+                <select required className="form-select" name="sales_person" onChange={handleFormChange} value={formData.salesperson}>
                   <option value="">Choose a Sales Person</option>
                   {salespersons.map((salesperson) => {
                     return (
@@ -92,7 +91,7 @@ const SalesForm = () => {
                 </select>
               </div>
               <div className="mb-3">
-                <select required className="form-select" name="purchaser" onChange={handleFormChange}>
+                <select required className="form-select" name="purchaser" onChange={handleFormChange} value={formData.purchaser}>
                   <option value="">Choose a Purchaser</option>
                   {purchasers.map((purchaser) => {
                     return (
@@ -104,7 +103,7 @@ const SalesForm = () => {
                 </select>
               </div>
               <div className="mb-3">
-                <select required className="form-select" name="vin" onChange={handleFormChange}>
+                <select required className="form-select" name="vin" onChange={handleFormChange} value={formData.vin}>
                   <option value="">Choose an Automobile</option>
                   {autos.map((auto) => {
                     if (!(auto.sold)) {
@@ -124,7 +123,8 @@ const SalesForm = () => {
                   name="sale_price"
                   id="sale_price"
                                   type="number"
-                                  onChange={handleFormChange}
+                  onChange={handleFormChange}
+                  value={formData.sale_price}
                 />
                 <label htmlFor="sale_price">Sale Price</label>
               </div>
