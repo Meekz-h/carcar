@@ -29,6 +29,25 @@ function Nav() {
                 Manufacturers
               </NavLink>
             </li>
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <NavLink className="dropdown-item" to="/manufacturers/new">
+                    Create Manufacturer
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
             <li className="nav-item">
               <NavLink
                 className="nav-link active"
@@ -38,6 +57,25 @@ function Nav() {
                 Automobiles
               </NavLink>
             </li>
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <NavLink className="dropdown-item" to="/automobiles/new">
+                    Create Automobile
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
             <li className="nav-item">
               <NavLink
                 className="nav-link active"
@@ -47,6 +85,25 @@ function Nav() {
                 Vehicles
               </NavLink>
             </li>
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <NavLink className="dropdown-item" to="/vehicles/new">
+                    Create Vehicle
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
             <li className="nav-item">
               <NavLink
                 className="nav-link active"
@@ -63,10 +120,12 @@ function Nav() {
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+              ></button>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
               >
-              </button>
-              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
+                <li>
                   <NavLink to="/sales/new" className="dropdown-item">
                     Create a sale
                   </NavLink>
@@ -87,12 +146,12 @@ function Nav() {
                   </NavLink>
                 </li>
                 <li>
-                <NavLink to="/salespersons/new" className="dropdown-item">
+                  <NavLink to="/salespersons/new" className="dropdown-item">
                     Create Sales Person
                   </NavLink>
                 </li>
                 <li>
-                <NavLink to="/salespersons/sales" className="dropdown-item">
+                  <NavLink to="/salespersons/sales" className="dropdown-item">
                     Sales by Sale person
                   </NavLink>
                 </li>

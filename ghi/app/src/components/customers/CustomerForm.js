@@ -34,7 +34,7 @@ const CustomerForm = () => {
       });
     }
   };
-  console.log(formData)
+
   return (
     <>
       {" "}
