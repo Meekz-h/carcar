@@ -41,11 +41,11 @@ const TechniciansForm = () => {
           <h1>Add a Technician</h1>
           <form id="create-technician-form" onSubmit={handleSubmit}>
             <div className="form-floating mb-3">
-              <input onChange={handleChange} value={formData.name} required className="form-control" name="name" id="name" type="text"/>
+              <input onChange={handleChange} value={formData.name} required className="form-control" placeholder="Name" name="name" id="name" type="text"/>
               <label htmlFor="name">Name</label>
             </div>
             <div className="form-floating mb-3">
-              <input onChange={handleChange} value={formData.employee_number} required className="form-control" name="employee_number" id="employee_number" type="text"/>
+              <input onChange={handleChange} value={formData.employee_number} required className="form-control" placeholder="Name" name="employee_number" id="employee_number" type="text"/>
               <label htmlFor="employee_number">Employee Number</label>
             </div>
             <button className="btn btn-primary">Create</button>
