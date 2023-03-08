@@ -30,7 +30,6 @@ const TechniciansForm = () => {
         const resp = await fetch(url, fetchConfig);
         if (resp.ok) {
             const data = await resp.json();
-            console.log(data)
             setFormData(initialState);
         }
     }

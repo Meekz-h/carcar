@@ -1,6 +1,5 @@
 from common.json import ModelEncoder
 from .models import Service, Technician, AutomobileVO
-import json
 
 
 class AutomobileVOEncoder(ModelEncoder):
@@ -29,11 +28,9 @@ class ServiceEncoder(ModelEncoder):
         "appt_datetime",
         "reason",
         "technician",
-        # "auto",
         "input_vin",
         "service_complete"
     ]
     encoders = {
         "technician": TechnicianEncoder(),
-        # "auto": AutomobileVOEncoder()
     }

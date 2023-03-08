@@ -157,6 +157,49 @@ function Nav() {
                 </li>
               </ul>
             </div>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                to="/service"
+              >
+                Service
+              </NavLink>
+            </li>
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <NavLink className="dropdown-item" to="/service/new">
+                    Create Service Appointment
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/service/history">
+                    Service History
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/technicians">
+                    Technicians
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/technicians/new">
+                    Add a Technician
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>

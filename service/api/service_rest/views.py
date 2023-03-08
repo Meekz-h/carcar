@@ -21,14 +21,9 @@ def service_list(request):
             technician = Technician.objects.get(employee_number=technician_number)
             content["technician"] = technician
 
-            # print("****************************",content["auto"])
-            # auto = AutomobileVO.objects.get(id=content["auto"])
-            # content["auto"] = auto
-
-        #    \/ AutomobileVO.DoesNotExist
         except:
             return JsonResponse({
-                "message": "Invalid vehicle name"
+                "message": "Invalid input"
                 },
                 status=400,
             )

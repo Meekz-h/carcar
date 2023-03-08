@@ -159,7 +159,6 @@ def api_manufacturer(request, pk):
 def api_vehicle_models(request):
     if request.method == "GET":
         models = VehicleModel.objects.all()
-        print(models)
         return JsonResponse(
             {"models": models},
             encoder=VehicleModelEncoder
