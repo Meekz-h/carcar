@@ -8,7 +8,6 @@ const VehiclesList = () => {
         const resp = await fetch("http://localhost:8100/api/models/")
         if (resp.ok) {
             const data = await resp.json()
-            console.log(data)
             setVehicles(data.models)
 
         }

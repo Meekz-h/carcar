@@ -19,7 +19,10 @@ def get_autos():
             vin = auto["vin"]
         )
     autos = AutomobileVO.objects.all()
-    print(autos)
+
+    #Prints in container to double check poller is creating AutomobileVO's
+    print("AutomobileVO's:",autos)
+
 
 def poll():
     while True:

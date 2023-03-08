@@ -8,7 +8,6 @@ const ManufacturersList = () => {
         const resp = await fetch("http://localhost:8100/api/manufacturers/")
         if (resp.ok) {
             const data = await resp.json()
-            console.log(data.manufacturers)
             setManufacturers(data.manufacturers)
 
         }

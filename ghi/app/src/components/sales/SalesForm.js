@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const SalesForm = () => {
-  const [salespersons, setSalesPersons] = useState([]);
+  const [salesPersons, setSalesPersons] = useState([]);
   const [purchasers, setPurchasers] = useState([]);
   const [autos, setAutos] = useState([]);
     const [formData, setFormData] = useState({
@@ -78,7 +78,7 @@ const SalesForm = () => {
               <div className="mb-3">
                 <select required className="form-select" name="sales_person" onChange={handleFormChange} value={formData.salesperson}>
                   <option value="">Choose a Sales Person</option>
-                  {salespersons.map((salesperson) => {
+                  {salesPersons.map((salesperson) => {
                     return (
                       <option
                         key={salesperson.id}

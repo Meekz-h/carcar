@@ -25,7 +25,6 @@ const SalesPersonForm = () => {
         const resp = await fetch(url, fetchConfig);
         if (resp.ok) {
             const data = await resp.json()
-            console.log(data)
             setFormData({
                 name: "",
                 employee_number:"",

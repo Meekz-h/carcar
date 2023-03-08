@@ -14,7 +14,6 @@ const AutomobileForm = () => {
     const resp = await fetch(url);
     if (resp.ok) {
       const data = await resp.json();
-      console.log(data.models);
       setModels(data.models);
     }
   };
@@ -32,7 +31,6 @@ const AutomobileForm = () => {
         const resp = await fetch(url, fetchConfig);
         if (resp.ok) {
             const data = await resp.json()
-            console.log(data)
             setFormData({
                 color: "",
                 year: "",

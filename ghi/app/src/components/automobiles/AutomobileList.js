@@ -8,7 +8,6 @@ const AutomobileList = () => {
         const resp = await fetch(url);
         if (resp.ok) {
             const data = await resp.json();
-            console.log(data)
             setAutomobiles(data.autos)
         }
     }

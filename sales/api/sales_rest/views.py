@@ -1,39 +1,15 @@
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
+from .models import AutomobileVO, Sale, SalesPerson, Customer
+from .encoders import  (AutomobileVOEncoder,
+                        SaleListEncoder,
+                        SalesPersonListEncoder,
+                        SalesPersonDetailEncoder,
+                        CustomerListEncoder,
+                        CustomerDetailEncoder,
+                        )
 import json
 
-from common.json import ModelEncoder
-from .models import AutomobileVO, Sale, SalesPerson, Customer
-
-# Create your views here.
-class AutomobileVOEncoder(ModelEncoder):
-    model = AutomobileVO
-    properties = ["vin", "sold"]
-
-class SalesPersonListEncoder(ModelEncoder):
-    model = SalesPerson
-    properties =["name", "id", "employee_number"]
-
-class SalesPersonDetailEncoder(ModelEncoder):
-    model = SalesPerson
-    properties = ["name", "employee_number"]
-
-class CustomerListEncoder(ModelEncoder):
-    model = Customer
-    properties = ["name", "id", "address"]
-
-class CustomerDetailEncoder(ModelEncoder):
-    model = Customer
-    properties = ["name","address","phone_number","id"]
-
-class SaleListEncoder(ModelEncoder):
-    model = Sale
-    properties = ["id","purchaser","sales_person","sale_price","vin"]
-    encoders = {
-        "sales_person":SalesPersonListEncoder(),
-        "purchaser":CustomerListEncoder(),
-        "vin":AutomobileVOEncoder(),
-    }
 
 @require_http_methods(["GET","POST"])
 def api_list_salesperson(request):
