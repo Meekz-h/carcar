@@ -93,7 +93,7 @@ const ServiceList = () => {
                   }
                   if (!(isComplete)){
                     return(
-                        <tr key={appointment.href}>
+                        <tr key={appointment.id}>
                             <td className="text-danger">{vip}</td>
                             <td>{appointment.input_vin}</td>
                             <td>{appointment.customer_name}</td>

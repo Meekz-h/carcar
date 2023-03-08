@@ -32,7 +32,7 @@ const TechniciansList = () => {
             <tbody>
                 {technicians.map(technician => {
                     return(
-                        <tr key={technician.href}>
+                        <tr key={technician.employee_number}>
                             <td>{technician.name}</td>
                             <td>{technician.employee_number}</td>
                         </tr>

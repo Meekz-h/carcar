@@ -77,7 +77,7 @@ function ServiceForm() {
                 <option value="">Choose A Technician</option>
                 {technicians.map(technician => {
                   return (
-                    <option key={technician.id} value={technician.employee_number}>{technician.name}</option>
+                    <option key={technician.employee_number} value={technician.employee_number}>{technician.name}</option>
                   )
                 })}
               </select>
