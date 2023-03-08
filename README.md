@@ -13,20 +13,20 @@ Team:
 ## Sales microservice
 
 I will create several models;
-# AutomobileVO:
+### AutomobileVO:
 * From inventory service;
 * VIN
 
-# Sales Person:
+### Sales Person:
 * Name
 * Employee Number
 
-# Potential Customer:
+### Potential Customer:
 * Name
 * Address
 * Phone-number
 
-# Sale Record:
+### Sale Record:
 * Sales Person (Foreign Key)
 * Purchasers name (Foreign Key)
 * VIN (Foreign Key)
