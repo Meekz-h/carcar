@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 import json
-from .models import Service, VehicleModelVO, Technician
+from .models import Service, AutomobileVO, Technician
 from .encoders import ServiceEncoder, TechnicianEncoder
 
 
@@ -10,22 +10,23 @@ def service_list(request):
 
     if request.method == "GET":
         service = Service.objects.all()
-        print(service)
         return JsonResponse({
             "service": service,
         }, encoder=ServiceEncoder, safe=False)
     else:
         content = json.loads(request.body)
         try:
-          technician_number = content["technician"]
-          technician = Technician.objects.get(employee_number=technician_number)
-          content["technician"] = technician
 
-          vehicle_id = int(content["vehicle"][12:13])
-          vehicle = VehicleModelVO.objects.get(id=vehicle_id)
-          content["vehicle"] = vehicle
+            technician_number = content["technician"]
+            technician = Technician.objects.get(employee_number=technician_number)
+            content["technician"] = technician
 
-        except VehicleModelVO.DoesNotExist:
+            # print("****************************",content["auto"])
+            # auto = AutomobileVO.objects.get(id=content["auto"])
+            # content["auto"] = auto
+
+        #    \/ AutomobileVO.DoesNotExist
+        except:
             return JsonResponse({
                 "message": "Invalid vehicle name"
                 },
@@ -36,6 +37,35 @@ def service_list(request):
             service,
             encoder=ServiceEncoder,
             safe=False,
+        )
+
+@require_http_methods(["GET", "PUT", "DELETE"])
+def show_service(request, id):
+
+    if request.method == "GET":
+        service = Service.objects.get(id=id)
+        return JsonResponse(
+            {"service": service},
+            encoder=ServiceEncoder,
+        )
+    elif request.method == "DELETE":
+        try:
+            service = Service.objects.get(id=id)
+            service.delete()
+            return JsonResponse(
+            {"service": service},
+            encoder=ServiceEncoder,
+            )
+        except Service.DoesNotExist:
+            return JsonResponse({"message": "Service Appointment Does Not Exist"})
+    else:
+        content = json.loads(request.body)
+        Service.objects.filter(id=id).update(**content)
+        service = Service.objects.get(id=id)
+
+        return JsonResponse(
+        {"service": service},
+        encoder=ServiceEncoder,
         )
 
 

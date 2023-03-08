@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import VehicleModelVO, Technician, Service
+from .models import AutomobileVO, Technician, Service
 
 
-@admin.register(VehicleModelVO)
-class VehicleModelVOAdmin(admin.ModelAdmin):
+@admin.register(AutomobileVO)
+class AutomobileVOAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Technician)

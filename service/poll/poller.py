@@ -10,18 +10,21 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "service_project.settings")
 django.setup()
 
 # Import models from service_rest, here.
-from service_rest.models import VehicleModelVO
+from service_rest.models import AutomobileVO
 
-def get_vehicle():
+def get_automobiles():
 
-    response = requests.get("http://inventory-api:8000/api/models/")
+    response = requests.get("http://inventory-api:8000/api/automobiles/")
     content = json.loads(response.content)
-    print("********************", content["models"])
-    for vehicle in content["models"]:
-        VehicleModelVO.objects.update_or_create(
-            import_href=vehicle["href"],
+    print("********************AUTOS", content)
+    for auto in content["autos"]:
+        AutomobileVO.objects.update_or_create(
             defaults={
-            "name": vehicle["name"],
+            "vin": auto["vin"],
+            "make": auto["model"]["manufacturer"]["name"],
+            "model": auto["model"]["name"],
+            "year": auto["year"],
+            "color": auto["color"]
             },
         )
 
@@ -29,7 +32,7 @@ def poll():
     while True:
         print('Service poller polling for data')
         try:
-            get_vehicle()
+            get_automobiles()
         except Exception as e:
             print(e, file=sys.stderr)
         time.sleep(15)
