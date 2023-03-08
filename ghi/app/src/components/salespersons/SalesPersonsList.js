@@ -11,8 +11,8 @@ const SalesPersonList = () => {
     }
   };
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   return (
     <>

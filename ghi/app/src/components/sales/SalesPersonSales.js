@@ -31,8 +31,8 @@ const SalesPersonSales = () => {
   }
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   if (changed) {
     fetchSalesData();

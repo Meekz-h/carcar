@@ -35,8 +35,8 @@ const SalesForm = () => {
   };
 
   useEffect(() => {
-      fetchData();
-  });
+      fetchData()
+  })
 
     const handleFormChange = (e) => {
         setFormData({

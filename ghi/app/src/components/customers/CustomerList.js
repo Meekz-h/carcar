@@ -11,7 +11,7 @@ const CustomerList = () => {
         }
     }
     useEffect(() => {
-        fetchData();
+        fetchData()
     },[])
 
     return (    <>
