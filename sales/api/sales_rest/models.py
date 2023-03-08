@@ -12,7 +12,7 @@ class SalesPerson(models.Model):
 class Customer(models.Model):
     name = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
-    phone_number = models.CharField(max_length=14)
+    phone_number = models.CharField(max_length=18)
 
 class Sale(models.Model):
     sales_person = models.ForeignKey(SalesPerson,related_name="sales", on_delete=models.CASCADE)
