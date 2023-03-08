@@ -34,8 +34,8 @@ const ManufacturersList = () => {
                     );
                 })}
             </tbody>
-            <Link to='/manufacturers/new' className="btn btn-primary">Create Manufacturer</Link>
         </table>
+        <Link to='/manufacturers/new' className="btn btn-primary">Create Manufacturer</Link>
     </>
 }
 

@@ -106,7 +106,7 @@ const ServiceList = () => {
                   }
                 })}
             </tbody>
-            {/* <Link to='/manufacturers/new' className="btn btn-primary">Create Manufacturer</Link> */}
+            <Link to='/manufacturers/new' className="btn btn-primary">Create Manufacturer</Link>
         </table>
     </>
 }
