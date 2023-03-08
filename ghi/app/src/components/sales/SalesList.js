@@ -24,7 +24,7 @@ const SalesList = () => {
               <thead>
                 <tr>
                   <th>Sales Person</th>
-                  <th>employee_number</th>
+                  <th>Employee Number</th>
                   <th>Purchaser</th>
                   <th>VIN</th>
                   <th>Sales Price</th>

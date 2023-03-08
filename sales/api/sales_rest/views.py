@@ -8,19 +8,19 @@ from .models import AutomobileVO, Sale, SalesPerson, Customer
 # Create your views here.
 class AutomobileVOEncoder(ModelEncoder):
     model = AutomobileVO
-    properties = ["vin","sold"]
+    properties = ["vin", "sold"]
 
 class SalesPersonListEncoder(ModelEncoder):
     model = SalesPerson
-    properties =["name","id", "employee_number"]
+    properties =["name", "id", "employee_number"]
 
 class SalesPersonDetailEncoder(ModelEncoder):
     model = SalesPerson
-    properties = ["name","employee_number"]
+    properties = ["name", "employee_number"]
 
 class CustomerListEncoder(ModelEncoder):
     model = Customer
-    properties = ["name","id","address"]
+    properties = ["name", "id", "address"]
 
 class CustomerDetailEncoder(ModelEncoder):
     model = Customer

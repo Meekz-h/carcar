@@ -13,24 +13,24 @@ Team:
 ## Sales microservice
 
 I will create several models;
-AutomobileVO:
--From inventory service;
--VIN
+# AutomobileVO:
+* From inventory service;
+* VIN
 
-Sales Person:
--Name
--Employee Number
+# Sales Person:
+* Name
+* Employee Number
 
-Potential Customer:
--Name
--Address
--Phone-number
+# Potential Customer:
+* Name
+* Address
+* Phone-number
 
-Sale Record:
--Sales Person (Foreign Key)
--Purchasers name (Foreign Key)
--VIN (Foreign Key)
--Price of sale
+# Sale Record:
+* Sales Person (Foreign Key)
+* Purchasers name (Foreign Key)
+* VIN (Foreign Key)
+* Price of sale
 
 It will integrate with the inventory microservice by grabbing the vins from the Automobiles by the poller and storing that valueobject.
 From these models I will be able to use the API to create,list,delete all requirements needed by the microservice.
