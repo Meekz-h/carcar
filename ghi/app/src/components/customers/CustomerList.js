@@ -14,9 +14,7 @@ const CustomerList = () => {
         fetchData()
     },[])
 
-    return (    <>
-        <div className="row">
-          <div className="offset-3 col-6">
+    return (<>
             <div className="shadow p-4 mt-4">
               <h1>Customers</h1>
               <table className="table table-striped">
@@ -44,8 +42,6 @@ const CustomerList = () => {
                 <button className="btn btn-primary">Create a Potential Customer</button>
               </Link>
             </div>
-          </div>
-        </div>
       </>);
 }
 export default CustomerList;

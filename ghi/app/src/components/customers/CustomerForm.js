@@ -36,9 +36,6 @@ const CustomerForm = () => {
 
   return (
     <>
-      {" "}
-      <div className="row">
-        <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
             <h1>Create a new customer</h1>
             <form id="create-customer-form" onSubmit={handleSumbit}>
@@ -81,8 +78,6 @@ const CustomerForm = () => {
               <button className="btn btn-primary">Create</button>
             </form>
           </div>
-        </div>
-      </div>
     </>
   );
 };

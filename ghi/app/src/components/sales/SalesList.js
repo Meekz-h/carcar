@@ -16,8 +16,7 @@ const SalesList = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="offset-3 col-6">
+
           <div className="shadow p-4 mt-4">
             <h1>Sales</h1>
             <table className="table table-striped">
@@ -58,8 +57,6 @@ const SalesList = () => {
               <button className="btn btn-primary ml-2">Customers</button>
             </Link>
           </div>
-        </div>
-      </div>
     </>
   );
 };

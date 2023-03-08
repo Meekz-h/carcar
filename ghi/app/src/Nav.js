@@ -127,7 +127,7 @@ function Nav() {
               >
                 <li>
                   <NavLink to="/sales/new" className="dropdown-item">
-                    Create a sale
+                    Create a Sale
                   </NavLink>
                 </li>
                 <li>

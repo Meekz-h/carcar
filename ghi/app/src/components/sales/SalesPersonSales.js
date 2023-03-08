@@ -41,8 +41,6 @@ const SalesPersonSales = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
             <h1>Sales person history</h1>
 
@@ -84,8 +82,6 @@ const SalesPersonSales = () => {
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
     </>
   );
 };

@@ -16,8 +16,7 @@ const AutomobileList = () => {
         fetchData();
     }, []);
 
-    return (<><div className="row">
-    <div className="offset-3 col-6">
+    return (<>
         <div className="shadow p-4 mt-4">
             <h1>Automobiles</h1>
             <table className="table table-striped">
@@ -47,7 +46,6 @@ const AutomobileList = () => {
             </table>
             <Link to="/automobiles/new"><button className='btn btn-primary'>Create a Automobile</button></Link>
         </div>
-    </div>
-</div></>);
+</>);
 }
 export default AutomobileList;
