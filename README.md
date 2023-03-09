@@ -6,7 +6,7 @@ Team:
 * Mico Hernandez- Sales microservice
 
 ## Design
-
+There will be 3 seperate microservices that our front end will interact with. The inventory service will be responsible for the Automobiles, the Manufacturers, and the Vehicles. The service microservice will be responsible for Service appointments, technicians. The sales service will be responsible for customers, sales persons, and sales. With these 3 seperate service, we will create react pages to generate our pages according to the data stored within each microservice.
 ## Service microservice
 
 
