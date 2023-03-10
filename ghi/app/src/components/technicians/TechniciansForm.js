@@ -5,9 +5,8 @@ const TechniciansForm = () => {
       name:"",
       employee_number:"",
     }
-    // const [technician, setTechnician] = useState([]);
-    const [formData, setFormData] = useState(initialState)
 
+    const [formData, setFormData] = useState(initialState)
 
     const handleChange = (e) => {
       setFormData({

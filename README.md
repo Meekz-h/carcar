@@ -8,7 +8,28 @@ Team:
 ## Design
 There will be 3 seperate microservices that our front end will interact with. The inventory service will be responsible for the Automobiles, the Manufacturers, and the Vehicles. The service microservice will be responsible for Service appointments, technicians. The sales service will be responsible for customers, sales persons, and sales. With these 3 seperate service, we will create react pages to generate our pages according to the data stored within each microservice.
 ## Service microservice
+My models for service are as follows:
+*Service -
+  customer name
+  appointment date/time
+  reason for appointment
+  service complete boolean
+  vin input from service form
+  technician foreign key
+  auto foreign key
 
+*Technician -
+  name
+  employee number
+
+*AutomobileVO -
+  vin
+  make
+  model
+  year
+  color
+
+Service is linked to Inventory through the AutomobileVO and poller, which grabs all the information in the Automobile model in the Inventory microservice. This is done in order to compare the the input vin to the entire inventory to determine if the vehicle being serviced was sold by the dealership in order to give them VIP treatment.
 
 ## Sales microservice
 

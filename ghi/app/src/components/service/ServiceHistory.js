@@ -19,7 +19,6 @@ const ServiceHistory = () => {
         if (resp.ok) {
             const data = await resp.json()
             setAppointments(data.service)
-
         }
     };
 
