@@ -1,46 +1,33 @@
 import { NavLink } from "react-router-dom";
+import './Nav.css'
 
 function Nav() {
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-success">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           CarCar
         </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/manufacturers"
-              >
-                Manufacturers
-              </NavLink>
-            </li>
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-success dropdown"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              />
+              >Manufacturers</button>
               <ul
                 className="dropdown-menu"
-                aria-labelledby="dropdownMenuButton1"
+                // aria-labelledby="dropdownMenuButton1"
               >
+                <li>
+                  <NavLink className="dropdown-item" to="/manufacturers">
+                    All Manufacturers
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink className="dropdown-item" to="/manufacturers/new">
                     Create Manufacturer
@@ -48,27 +35,23 @@ function Nav() {
                 </li>
               </ul>
             </div>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/automobiles"
-              >
-                Automobiles
-              </NavLink>
-            </li>
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-success dropdown"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              />
+              >Automobiles</button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
+                <li>
+                  <NavLink className="dropdown-item" to="/automobiles">
+                    All Automobiles
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink className="dropdown-item" to="/automobiles/new">
                     Create Automobile
@@ -76,27 +59,23 @@ function Nav() {
                 </li>
               </ul>
             </div>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/vehicles"
-              >
-                Vehicles
-              </NavLink>
-            </li>
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-success dropdown"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              />
+              >Vehicles</button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
+                <li>
+                  <NavLink className="dropdown-item" to="/vehicles">
+                    All Vehicles
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink className="dropdown-item" to="/vehicles/new">
                     Create Vehicle
@@ -104,29 +83,25 @@ function Nav() {
                 </li>
               </ul>
             </div>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/sales"
-              >
-                Sales
-              </NavLink>
-            </li>
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-success dropdown"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              ></button>
+              >Sales</button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
                 <li>
-                  <NavLink to="/sales/new" className="dropdown-item">
+                  <NavLink to="/sales" className="dropdown-item">
+                    All Sales
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/sales/new" className="dropdown-item" id="create-sale">
                     Create a Sale
                   </NavLink>
                 </li>
@@ -157,27 +132,23 @@ function Nav() {
                 </li>
               </ul>
             </div>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/service"
-              >
-                Service
-              </NavLink>
-            </li>
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-success dropdown"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              />
+              >Sevice</button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
+                <li>
+                  <NavLink className="dropdown-item" to="/service">
+                    All Service Appointments
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink className="dropdown-item" to="/service/new">
                     Create Service Appointment
